@@ -1,12 +1,13 @@
 {
   "name": "mister-ai",
   "version": "1.0.0",
-  "description": "موقع Mister-AI لمقالات أخبار الجزائر اليومية",
   "main": "index.js",
-  "scripts": {},
-  "author": "Mister-AI",
-  "license": "MIT",
-  "dependencies": {
-    "node-fetch": "^3.3.1"
-  }
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "node api/hello.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {}
 }
