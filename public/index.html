@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mister-AI | أخبار الجزائر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; direction: rtl; background:#f4f4f4; margin:0 }
+    header { background:#111; color:#fff; padding:20px; text-align:center }
+    main { max-width:900px; margin:auto; padding:20px }
+    article { background:#fff; padding:20px; border-radius:8px; margin-bottom:20px }
+    footer { background:#111; color:#fff; text-align:center; padding:10px }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mister-AI</h1>
+  <p>ملخص ذكي يومي لأخبار الجزائر</p>
+</header>
+
+<main>
+  <article id="content">جاري تحميل المقال...</article>
+</main>
+
+<footer>© 2026 Mister-AI</footer>
+
+<script>
+fetch("/api/article")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("content").innerHTML =
+      `<h2>${data.title}</h2><p>${data.body}</p>`;
+  })
+  .catch(err => {
+    document.getElementById("content").innerHTML = "خطأ في تحميل المقال.";
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
