@@ -1,0 +1,9 @@
+{
+  "name": "mister-ai",
+  "version": "1.0.0",
+  "description": "موقع Mister-AI لمقالات أخبار الجزائر اليومية",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Mister-AI",
+  "license": "MIT"
+}
